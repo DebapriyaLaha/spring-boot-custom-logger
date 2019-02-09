@@ -11,7 +11,7 @@ jdk:
 
 before_script:
  - chmod +x gradlew
- - chmod +x gradle/wrapper/gradle-wrapper.jar
+ - chmod +x ./gradle/wrapper/gradle-wrapper.jar
  - ls -lrth
 
 script:
