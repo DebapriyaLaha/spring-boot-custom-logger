@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/DebapriyaLaha/spring-boot-custom-logger.svg?branch=Development)](https://travis-ci.org/DebapriyaLaha/spring-boot-custom-logger)
