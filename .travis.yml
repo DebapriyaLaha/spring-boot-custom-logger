@@ -17,4 +17,5 @@ before_script:
  - ls -lrth
 
 script:
- - ./gradlew jacocoTestReport coveralls
+ - gradle assemble
+ - gradle jacocoTestReport coveralls
