@@ -1,8 +1,19 @@
 language: java
 install: true
 
+os:
+ - linux
+
+cache:
+  directories:
+    - $HOME/.gradle
+
 jdk:
-- oraclejdk8
+ - oraclejdk8
+
+
+before_script:
+ - chmod +x gradlew
 
 script:
-- ./gradlew jacocoTestReport coveralls
+ - ./gradlew jacocoTestReport coveralls
