@@ -8,12 +8,10 @@ cache:
 jdk:
  - oraclejdk8
 
-
-before_script:
+before_install:
  - chmod +x gradlew
  - chmod 777 gradle
  - ls -lrth
 
-script:
- - ./gradlew assemble
+after_success:
  - ./gradlew jacocoTestReport coveralls
