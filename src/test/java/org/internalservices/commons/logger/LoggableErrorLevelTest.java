@@ -78,7 +78,7 @@ public class LoggableErrorLevelTest {
     public void errorTest() {
         someService2.withError();
         assertThat(capture.toString(), containsString(
-                "ERROR org.internalservices.commons.logger.logger.LoggableErrorLevelTest$SomeService2 - "
+                "ERROR org.internalservices.commons.logger.LoggableErrorLevelTest$SomeService2 - "
                         + "#withError([]): NULL in"));
     }
 
@@ -86,7 +86,7 @@ public class LoggableErrorLevelTest {
     public void offTest() {
         someService2.withOff();
         assertThat(capture.toString(), not(containsString(
-                "org.internalservices.commons.logger.logger.LoggableErrorLevelTest$SomeService2 - "
+                "org.internalservices.commons.logger.LoggableErrorLevelTest$SomeService2 - "
                         + "#withOff([]): NULL in")));
     }
 
@@ -94,7 +94,7 @@ public class LoggableErrorLevelTest {
     public void fatalTest() {
         someService2.withFatal();
         assertThat(capture.toString(), containsString(
-                "ERROR org.internalservices.commons.logger.logger.LoggableErrorLevelTest$SomeService2 - "
+                "ERROR org.internalservices.commons.logger.LoggableErrorLevelTest$SomeService2 - "
                         + "#withFatal([]): NULL in"));
     }
 

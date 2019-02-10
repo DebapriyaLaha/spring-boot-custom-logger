@@ -60,7 +60,7 @@ public class LoggableTest {
     public void defaultTest() {
         someService.withDefault();
         assertThat(capture.toString(), containsString(
-                "INFO org.internalservices.commons.logger.logger.LoggableTest$SomeService - "
+                "INFO org.internalservices.commons.logger.LoggableTest$SomeService - "
                         + "#withDefault([]): NULL in"));
     }
 
@@ -68,7 +68,7 @@ public class LoggableTest {
     public void defaultSkipArgsAndResultTest() {
         someService.withSkipArgsAndResultDefault(0);
         assertThat(capture.toString(), containsString(
-                "INFO org.internalservices.commons.logger.logger.LoggableTest$SomeService - "
+                "INFO org.internalservices.commons.logger.LoggableTest$SomeService - "
                         + "#withSkipArgsAndResultDefault(..): .. in"));
     }
 
@@ -76,7 +76,7 @@ public class LoggableTest {
     public void paramsTest() {
         someService.withParams("str", 10);
         assertThat(capture.toString(), containsString(
-                "INFO org.internalservices.commons.logger.logger.LoggableTest$SomeService - "
+                "INFO org.internalservices.commons.logger.LoggableTest$SomeService - "
                         + "#withParams(['str', 10]): NULL in"));
     }
 
