@@ -14,5 +14,4 @@ before_install:
  - ls -lrth
 
 after_success:
- - ./gradlew codeCoverageReport
- - bash <(curl -s https://codecov.io/bash)
+ - ./gradlew jacocoTestReport coveralls
