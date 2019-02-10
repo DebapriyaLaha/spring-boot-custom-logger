@@ -38,10 +38,6 @@ repositories {
     mavenCentral()
 }
 
-coveralls {
-    jacocoReportPath 'build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml'
-}
-
 dependencies {
     compile 'org.apache.commons:commons-lang3:3.8.1'
     compile 'org.springframework.boot:spring-boot-starter-aop'

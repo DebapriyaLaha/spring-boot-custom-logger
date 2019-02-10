@@ -1,1 +1,2 @@
 [![Build Status](https://travis-ci.org/DebapriyaLaha/spring-boot-custom-logger.svg?branch=Development)](https://travis-ci.org/DebapriyaLaha/spring-boot-custom-logger)
+[![Coverage Status](https://coveralls.io/repos/github/DebapriyaLaha/spring-boot-custom-logger/badge.svg?branch=Development)](https://coveralls.io/github/DebapriyaLaha/spring-boot-custom-logger?branch=Development)
