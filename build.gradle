@@ -24,7 +24,7 @@ apply plugin: 'eclipse'
 apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
-apply plugin: 'signing'
+
 
 group = "org.internalservices.commons"
 archivesBaseName = "spring-boot-custom-logger"

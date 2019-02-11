@@ -19,10 +19,6 @@ task sourcesJar(type: Jar) {
 
 artifacts { archives javadocJar, sourcesJar }
 
-signing {
-    required { !version.endsWith("SNAPSHOT") && gradle.taskGraph.hasTask(uploadArchives) }
-    sign configurations.archives
-}
 
 uploadArchives {
     println 'uploading artifact details goes here...'
