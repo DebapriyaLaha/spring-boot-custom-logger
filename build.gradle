@@ -33,6 +33,7 @@ bootJar.enabled = false
 jar.enabled = true
 
 apply from: 'gradle/checker.gradle'
+apply from: 'gradle/release.gradle'
 
 repositories {
     mavenCentral()

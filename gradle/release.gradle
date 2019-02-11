@@ -1,0 +1,44 @@
+compileJava { options.fork = true }
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Spring boot Logger',
+                'Implementation-Version': version
+    }
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts { archives javadocJar, sourcesJar }
+
+signing {
+    required { !version.endsWith("SNAPSHOT") && gradle.taskGraph.hasTask(uploadArchives) }
+    sign configurations.archives
+}
+
+uploadArchives {
+    println 'uploading artifact details goes here...'
+}
+
+release {
+
+    preTagCommitMessage = '[Release]: '
+    tagCommitMessage = '[Release]: creating tag '
+    newVersionCommitMessage = '[Release]: new snapshot version '
+    tagTemplate = 'v${version}'
+    git {
+        requireBranch = 'Development'
+        pushToRemote = 'origin'
+    } 
+}
+
+
+afterReleaseBuild.dependsOn uploadArchives
